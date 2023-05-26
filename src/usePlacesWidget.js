@@ -86,11 +86,9 @@ export default function usePlacesWidget(props) {
       }
     };
 
-    if (apiKey) {
-      handleLoadScript().then(() => handleAutoComplete());
-    } else {
+    setTimeout(() => {
       handleAutoComplete();
-    }
+    }, 500);
 
     return () => (event.current ? event.current.remove() : undefined);
   }, []);
