@@ -88,7 +88,7 @@ export default function usePlacesWidget(props) {
 
     setTimeout(() => {
       handleAutoComplete();
-    }, 500);
+    }, 2000);
 
     return () => (event.current ? event.current.remove() : undefined);
   }, []);
